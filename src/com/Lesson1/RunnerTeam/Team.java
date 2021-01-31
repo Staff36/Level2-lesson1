@@ -9,6 +9,10 @@ import com.Lesson1.Trace.Stages.Trace;
 
 public class Team {
     private Runners team[] = new Runners[4];
+
+    public Runners[] getTeam() {
+        return team;
+    }
     private String teamName;
     public Team(){
         this.teamName= "Avengers";
@@ -18,17 +22,7 @@ public class Team {
         this.team[3]= new Human("Petya" ,6,150);
     }
 
-    public void dolt(Course course){
-       Trace trace1[]= course.getCource();
-        for (int i = 0; i < team.length; i++) {
-            System.out.println("Participant is: "+team[i].getName());
-            for (int j = 0; j < trace1.length; j++) {
-                team[i].dolt(trace1[j]);
-            }
-            if(team[i].isActivity()) System.out.println(team[i].getName()+" is won!");
-            System.out.println();
-        }
-    }
+
 
     public void showWinners(){
         System.out.println(teamName+" team winners:");
