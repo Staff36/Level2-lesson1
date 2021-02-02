@@ -26,12 +26,7 @@ public Participant(String name, int maximumHeight, int stamina){
         return active;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
     private boolean active=true;
-    private boolean passed=false;
 
     public void decreaseStamina(int distance){
         if (!active)return;
